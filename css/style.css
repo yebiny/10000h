@@ -74,7 +74,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .intro .intro_saying{
@@ -114,7 +114,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
-    font-size: 25px
+    font-size: 22px
     
 }
 
@@ -134,18 +134,83 @@ body {
 .inputs input{
     
     border-radius: 10px;
-    width: 250px;
-    height: 50px;
-    margin: 0px 20px 30px 20px;
+    width: 220px;
+    height: 37px;
+    margin: -22px 20px 0px 20px;
     padding: 10px;
     border: none;
+    font-size:22px;
     
 }
 
 .inputs input::placeholder {
     
     color: lightgray;
-    font-size: 26px;
-    font-family: GmarketSansMedium;
+    font-size: 22px;
+    font-family: 'GmarketSansMedium';
 }
+
+
+.start{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+
+.start .start_wrap{
+    display: flex;
+    align-items: center;
+}
+
+
+.start .start_wrap .start_button{
+    width: 460px;
+    height: 56px;
+    border-radius: 50px;
+    border:none;
+    background-color: #FCEE21;
+    font-size:20px;
+    font-family: 'GmarketSansMedium';
+    font-weight: bold;
+    color: #5B2386;
+    margin-left: 80px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.loading{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    
+}
+
+@keyframes rotate{
+    100%{transform: rotate(360deg); 
+    }
+}
+
+.loading .loading_wrap img {
+    
+    width: 100px;
+    height: auto;
+    animation: rotate 1.6s infinite linear;
+}
+
+
+.result{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    
+}
+
+.result .result_wrap{
+    font-size: 20px;
+}
+
 

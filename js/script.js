@@ -1,4 +1,8 @@
 const startButton = document.querySelector('.start_button');
+const modalButton = document.querySelector('.modal_button');
+const shareButton = document.querySelector('.share_button');
+
+
 const loading = document.querySelector('.loading');
 const result = document.querySelector('.result');
 
@@ -16,7 +20,10 @@ function after_click(){
     result.style.display = 'flex'
     
     fieldResult.innerText = fieldValue.value;
-    timeResult.innerText = timeValue.value;
+    
+    const dayValue = parseInt( (10000 / timeValue.value) );
+    
+    timeResult.innerText = dayValue;
 
 }
 
@@ -42,4 +49,18 @@ function click_start_button(){
 
 }
 
+function copy_url(){
+    let url = window.location.href;
+    let tmp = document.createElement('input');
+    
+    document.body.appendChild(tmp);
+    tmp.value = url;
+    tmp.select();
+	document.execCommand("copy");
+    document.body.removeChild(tmp);
+    
+    alert('URL이 복사되었습니다.');  
+}
+
 startButton.addEventListener("click", click_start_button);
+shareButton.addEventListener("click", copy_url);

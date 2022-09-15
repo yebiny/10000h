@@ -4,17 +4,7 @@ html, body{
 }
 
 
-button {
-    width: 150px;
-    height: 70px;
-    font-size: 15px;
-    font-weight: bold;
-    margin: 20px;
-    border-width: 5px;
-    border-radius: 15px;
-    padding: 15px;
-    
-}
+
 
 button:hover {
     cursor: pointer;
@@ -26,6 +16,14 @@ button:hover {
 .btn1 {
     border-color: aqua;
     box-shadow: 0 10px 20px;
+    width: 150px;
+    height: 70px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 20px;
+    border-width: 5px;
+    border-radius: 15px;
+    padding: 15px;
     
 }
 
@@ -34,6 +32,14 @@ button:hover {
 }
 
 .btn2 {
+    width: 150px;
+    height: 70px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 20px;
+    border-width: 5px;
+    border-radius: 15px;
+    padding: 15px;
     
     border: none;
     background: linear-gradient(
@@ -78,4 +84,75 @@ button:hover {
     content: '클릭!';
 }
 
+.nice_btn{
+    position: absolute;
+    top: 25%;
+    left: 30%;
+}
 
+.nice_btn1{
+    width: 150px;
+    height: 150px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 20px;
+    border-width: 5px;
+    border-radius: 100%;
+    padding: 15px;
+    box-shadow: 0 10px 20px;
+
+        
+    border: none;
+    background: linear-gradient(
+        60deg,
+        #F0FFFF,
+        #ADD8E6,
+        #96DED1,
+        #40E0D0,
+        #0096FF,
+        #0000FF
+    );
+    background-size: 200%;   
+    animation: change_color 5s ease infinite;
+
+}
+
+.nice_btn1:active{
+    transform: rotate(10deg);
+
+}
+
+.nice_btn1:hover::after{
+    border: 3px solid;
+    border-color: aqua;
+    border-radius: 100%;
+    content: '';
+    width: 200px;
+    height:200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+    animation: nice_ring 2s infinite;
+}
+
+
+@keyframes nice_ring{
+    0%{ 
+        width: 150px;
+        height:150px;
+        border-width: 30px;
+        opacity: .6;
+    }
+    
+    100%{
+        width: 300px;
+        height:300px;
+        border-width: 0px;
+        opacity: .0;
+
+    }
+
+}
